@@ -1,0 +1,39 @@
+public class Tree(){
+    
+    Node root;
+    
+    public Tree(){
+        root = new Node();
+    }
+    
+    public Tree(Node rootNode){
+        root = rootNode;
+    }
+    
+    public void inOrderTraversal(Node current, int value){
+        Node curr = current;
+        
+        if(node.left != null){
+            inOrderTraversal(curr.left);
+        }
+        else{
+            if(curr.value == value){
+                return curr;
+            }
+            if(curr.right != null){
+                inOrderTraversal(curr.right);
+            }
+        }   
+               
+    }
+    
+    public void postOrderTraversal(){
+    
+    }
+    
+    public void preOrderTraversal(){
+    
+    }
+    
+    
+}

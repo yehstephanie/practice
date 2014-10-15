@@ -1,0 +1,34 @@
+public class Node(){
+    int value;
+    Node leftChild;
+    Node rightChild;
+    
+    public Node(int newValue){
+        value = newValue;
+    }
+    
+    public int getValue(){
+        return value;
+    }
+    
+    public void setValue(int newValue){
+        value = newValue;
+    }
+    
+    public Node getLeftChild(){
+        return leftChild;
+    }
+    
+    public void setLeftChild(Node left){
+        leftChild = left;
+    }
+    
+    public Node getRightChild(){
+        return rightChild;
+    }
+    
+    public void setRightChild(Node right){
+        rightChilde = right;
+    }
+}
+
