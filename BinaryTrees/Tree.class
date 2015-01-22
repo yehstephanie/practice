@@ -10,6 +10,39 @@ public class Tree(){
         root = rootNode;
     }
     
+    public void createTree(){
+
+        int [] ordered = {2,3,4,5,6,7,8,9};
+        int [] duplicates = {2, 7, 8, 33, 4, 9, 2, 8, 6};
+        for(int num : ordered){
+
+            add(num, root);
+        }
+    }
+
+    public void add(int toAdd, Node startPt){
+
+        Node current = startPt;
+        Node newNode = new Node(toAdd);
+
+        if(toAdd <= current.value && current.left != null){
+            current = current.left;
+        }
+        else{
+            current.left = newNode;
+            return;
+        }
+        if(current.right != null){
+            current = current.right;
+        }
+        else{
+            current.right = newNode;
+            return;
+        }
+        add(toAdd, current);
+
+    }
+
     public void inOrderTraversal(Node current, int value){
         Node curr = current;
         
@@ -34,6 +67,5 @@ public class Tree(){
     public void preOrderTraversal(){
     
     }
-    
-    
+        
 }
